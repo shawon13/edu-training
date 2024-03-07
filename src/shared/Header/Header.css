@@ -1,0 +1,50 @@
+.logo-title {
+    font-family: "Archivo", sans-serif;
+}
+
+.logo-des {
+    font-family: "Archivo", sans-serif;
+}
+
+.title-color {
+    color: #fc097c;
+}
+
+.btn-login {
+    background-color: #fc097c;
+    color: white !important;
+}
+
+.navbar-nav a {
+    font-family: "Archivo", sans-serif;
+    color: #1a0a1e;
+}
+
+.menu-trigger img {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    width: 200px;
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -5;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background: var(--secondary-bg);
+    transform: rotate(45deg);
+}

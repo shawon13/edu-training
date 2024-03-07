@@ -1,0 +1,24 @@
+.slider-overlay {
+    background: rgba(5, 65, 218, 0.7);
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slick-prev {
+    left: 54px !important;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 54px !important;
+    z-index: 1;
+    opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 36px !important;
+
+}

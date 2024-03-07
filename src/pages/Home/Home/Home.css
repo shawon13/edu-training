@@ -1,0 +1,6 @@
+.speaker {
+    background-image: url('../../../assets//speaker_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
