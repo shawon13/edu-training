@@ -11,6 +11,7 @@ import profile from '../../assets/user.png'
 import setting from '../../assets/settings.png'
 import help from '../../assets/question.png'
 import logout from '../../assets/log-out.png'
+import ActiveLink from '../../Router/ActiveLink';
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     const [open, setOpen] = useState(false);
@@ -33,11 +34,11 @@ const Header = () => {
                     </div>
                 </Navbar.Brand>
                 <Nav className="ms-auto align-items-center">
-                    <Link to='/' className='ms-2 fs-6 fw-bold px-4 py-2'>Home</Link>
-                    <Link to='/about' className='ms-2 fs-6 fw-bold px-4 py-2'>About</Link>
-                    <Link to='/events' className='ms-2 fs-6 fw-bold px-4 py-2'>Events</Link>
-                    <Link to='/blog' className='ms-2 fs-6 fw-bold px-4 py-2'>Blog</Link>
-                    <Link to='/contact' className='ms-2 fs-6 fw-bold px-4 py-2'>Contact</Link>
+                    <ActiveLink to='/' className='ms-2 fs-6 fw-bold px-4 py-2'>Home</ActiveLink>
+                    <ActiveLink to='/about' className='ms-2 fs-6 fw-bold px-4 py-2'>About</ActiveLink>
+                    <ActiveLink to='/events' className='ms-2 fs-6 fw-bold px-4 py-2'>Events</ActiveLink>
+                    <ActiveLink to='/blog' className='ms-2 fs-6 fw-bold px-4 py-2'>Blog</ActiveLink>
+                    <ActiveLink to='/contact' className='ms-2 fs-6 fw-bold px-4 py-2'>Contact</ActiveLink>
                     {
                         user ? <img src={userPic} onClick={() => setOpen(!open)} className='user-pic rounded-circle' style={{ marginLeft: '30px', cursor: 'pointer' }} alt="" /> : <Link to='/login' className='ms-2 fs-6 fw-bold px-4 py-2 btn-login rounded fw-medium'>Login</Link>
 

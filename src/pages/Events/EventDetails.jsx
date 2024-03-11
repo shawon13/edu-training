@@ -20,7 +20,7 @@ const EventDetails = () => {
                         {details}
                     </Card.Text>
                     <p className='fs-3 fw-medium'><FontAwesomeIcon icon={faDollar} /> {price}</p>
-                    <Link to='' className='btn btn-outline-dark fs-5 fw-medium text-capitalize'>Purchase tickets</Link>
+                    <Link to='/purchase' className='btn btn-outline-dark fs-5 fw-medium text-capitalize'>Purchase tickets</Link>
                 </Card.Body>
             </Card>
         </div >

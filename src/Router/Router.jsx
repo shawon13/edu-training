@@ -9,11 +9,14 @@ import Blog from "../pages/Blog/Blog";
 import Contact from "../pages/Contact/Contact";
 import EventDetails from "../pages/Events/EventDetails";
 import PrivetRoute from "./PrivetRoute";
+import Purchase from "../pages/Purchase/Purchase";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -21,9 +24,18 @@ const router = createBrowserRouter([
                 loader: () => fetch('https://edu-training-server.vercel.app/events')
             },
             {
+                path: '/events',
+                element: <Events></Events>,
+                loader: () => fetch('https://edu-training-server.vercel.app/events')
+            },
+            {
                 path: '/event/:id',
                 element: <PrivetRoute><EventDetails></EventDetails></PrivetRoute>,
                 loader: ({ params }) => fetch(`https://edu-training-server.vercel.app/event/${params.id}`)
+            },
+            {
+                path: '/purchase',
+                element: <PrivetRoute><Purchase></Purchase></PrivetRoute>
             },
             {
                 path: '/login',
@@ -39,7 +51,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/events',
-                element: <Events></Events>
+                element: <PrivetRoute><Events></Events></PrivetRoute>
             },
             {
                 path: '/blog',
