@@ -9,7 +9,7 @@ const Footer = () => {
         <section className='bg-black py-5'>
             <Container>
                 <Row>
-                    <Col md={4}>
+                    <Col md={5}>
                         <div className='text-white'>
                             <h2>EduTraining</h2>
                             <p>We’re inviting the top creatives in the tech industry from all over the world to come learn, grow, scrape their knees, try new things, to be vulnerable, and to have epic adventures</p>
@@ -50,7 +50,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </Col>
-                    <Col md={2}>
+                    <Col md={1}>
                         <div className='text-white'>
                             <h4>Get In Touch</h4>
                             <FontAwesomeIcon className='border border-1 p-2 rounded-circle' style={{ width: '20px', height: '20px' }} icon={faFacebook} />

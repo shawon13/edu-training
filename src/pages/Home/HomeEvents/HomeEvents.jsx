@@ -13,7 +13,7 @@ const HomeEvents = ({ event }) => {
                 <Card.Body>
                     <Card.Title className='fs-2 fw-bold text-capitalize'>{title}</Card.Title>
                     <Card.Text>
-                        {details}
+                        {details.slice(0, 200)}....
                     </Card.Text>
                     <p className='fs-3 fw-medium'><FontAwesomeIcon icon={faDollar} /> {price}</p>
                     <Link to={`/event/${id}`} className='btn btn-outline-dark fs-5 fw-medium'>Event Details</Link>

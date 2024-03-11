@@ -1,5 +1,6 @@
 .speaker-div {
     overflow: hidden;
+    transition: .5s;
 }
 
 .speaker-img {
@@ -14,7 +15,7 @@
     width: 255px !important;
     height: 255px !important;
     border-radius: 50% !important;
-    transition: .5s ease;
+    transition: .5s;
 }
 
 .img-overlay {
@@ -28,12 +29,12 @@
     border-radius: 50%;
     margin: 0px auto;
     visibility: hidden;
-    transition: .5s ease;
+    transition: .5s;
 }
 
 .speaker-div:hover .speaker-title {
     color: #ff007a;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .speaker-div:hover .img-overlay {

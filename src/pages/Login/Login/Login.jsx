@@ -4,12 +4,15 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Form } from 'react-bootstrap';
 import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
-    const { loginUser } = useContext(AuthContext)
+    const { loginUser, fbLogin, googleLogin, githubLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const loaction = useLocation()
+    const from = loaction?.state?.from?.pathname || '/';
     const [type, setType] = useState('password');
     const handleType = () => {
         if (type === 'text') {
@@ -18,6 +21,15 @@ const Login = () => {
         else {
             setType('text')
         }
+    }
+    const handleFbLogin = () => {
+        fbLogin()
+    }
+    const handleGoogleLogin = () => {
+        googleLogin()
+    }
+    const handleGithubLogin = () => {
+        githubLogin()
     }
     const handleLogin = (event) => {
         event.preventDefault();
@@ -31,6 +43,7 @@ const Login = () => {
                 console.log(loggedUser);
                 form.reset();
                 toast('Successfully Login');
+                navigate(from);
             })
     }
     return (
@@ -65,13 +78,13 @@ const Login = () => {
                 <p className='or-hr-two mb-0'></p>
             </div>
             <div className='d-flex justify-content-center'>
-                <span className='me-3 p-2 rounded-circle text-center bg-light' style={{ cursor: 'pointer', height: '40px', width: '40px', border: '1px solid #f9f9f9' }}>
+                <span onClick={handleFbLogin} className='me-3 p-2 rounded-circle text-center bg-light' style={{ cursor: 'pointer', height: '40px', width: '40px', border: '1px solid #f9f9f9' }}>
                     <FontAwesomeIcon icon={faFacebook} className='fs-5' />
                 </span>
-                <span className='me-3 p-2 rounded-circle text-center bg-light' style={{ cursor: 'pointer', height: '40px', width: '40px', border: '1px solid #f9f9f9' }}>
+                <span onClick={handleGoogleLogin} className='me-3 p-2 rounded-circle text-center bg-light' style={{ cursor: 'pointer', height: '40px', width: '40px', border: '1px solid #f9f9f9' }}>
                     <FontAwesomeIcon icon={faGoogle} className='fs-5' />
                 </span>
-                <span className='p-2 rounded-circle text-center bg-light' style={{ cursor: 'pointer', height: '40px', width: '40px', border: '1px solid #f9f9f9' }}>
+                <span onClick={handleGithubLogin} className='p-2 rounded-circle text-center bg-light' style={{ cursor: 'pointer', height: '40px', width: '40px', border: '1px solid #f9f9f9' }}>
                     <FontAwesomeIcon icon={faGithub} className='fs-5' />
                 </span>
             </div>
