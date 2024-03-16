@@ -47,7 +47,7 @@ const Login = () => {
             })
     }
     return (
-        <div className='mx-auto card bg-info-subtle my-5 px-5 py-4' style={{ width: '35%' }}>
+        <div className='mx-auto card bg-info-subtle my-5 px-5 py-4 login-width' style={{ width: '35%' }}>
             <h2 className='text-center mb-4'>Please Login</h2>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

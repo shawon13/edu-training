@@ -1,0 +1,29 @@
+@media screen and (max-width:991px) {
+    .title-features {
+        margin-bottom: 50px !important;
+    }
+
+    .three-days-card {
+        margin-top: -200px !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .title-features {
+        text-align: center !important;
+    }
+
+    .training-card {
+        margin-bottom: 30px !important;
+    }
+
+    .three-days-card {
+        margin-top: 30px !important;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .features {
+        padding: 50px 0px !important;
+    }
+}

@@ -79,3 +79,27 @@ button:hover {
 .position-absolute {
     position: absolute;
 }
+
+@media screen and (max-width:1199px) {
+    .login-width {
+        width: 45% !important;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .login-width {
+        width: 55% !important;
+    }
+}
+
+@media screen and (max-width:766px) {
+    .login-width {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .login-width {
+        width: 95% !important;
+    }
+}

@@ -107,10 +107,10 @@ const Home = () => {
                 }
             </Slider>
             {/* Event Section Start */}
-            <section className='padding'>
+            <section className='padding home-event'>
                 <Container>
-                    <h2 className='text-center fw-bold' style={{ fontSize: '60px' }}>Events</h2>
-                    <p className='text-center mx-auto w-75 mt-3 mb-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam et alias, vero eos consectetur molestiae quis modi repudiandae maxime possimus atque asperiores doloremque harum sunt eum? Labore fuga culpa ab.</p>
+                    <h2 className='text-center fw-bold home-event-title'>Events</h2>
+                    <p className='text-center mx-auto w-75 mt-3 mb-5 event-des'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam et alias, vero eos consectetur molestiae quis modi repudiandae maxime possimus atque asperiores doloremque harum sunt eum? Labore fuga culpa ab.</p>
                     <Row xs={1} md={2} className="g-4">
                         {
                             events.map(event => <HomeEvents key={event.id} event={event}></HomeEvents>)
@@ -125,7 +125,7 @@ const Home = () => {
                 <Container>
                     <p className='text-center fw-bold'>LISTEN TO THE</p>
                     <h2 className='text-center fw-bold' style={{ fontSize: '60px', marginBottom: '80px' }}>Event Speakers</h2>
-                    <Row xs={1} md={4} className="g-4">
+                    <Row xs={1} sm={2} md={3} xl={4} className="g-4">
                         {
                             speakers.map(speaker => <Speakers key={speaker.id} speaker={speaker}></Speakers>)
                         }

@@ -4,3 +4,51 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.event-title {
+    font-size: 60px;
+}
+
+@media screen and (max-width:767px) {
+    .home-event-title {
+        font-size: 50px !important;
+    }
+
+    .event-des {
+        width: 100% !important;
+    }
+
+    .speaker h2 {
+        font-size: 50px !important;
+    }
+
+    .title-features {
+        font-size: 50px !important;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .event-des {
+        font-size: 14px !important;
+    }
+
+    .speaker {
+        padding: 50px 0px !important;
+    }
+
+    .home-event {
+        padding: 50px 0px !important;
+    }
+
+    .home-event-title {
+        font-size: 42px !important;
+    }
+
+    .speaker h2 {
+        font-size: 42px !important;
+    }
+
+    .title-features {
+        font-size: 42px !important;
+    }
+}

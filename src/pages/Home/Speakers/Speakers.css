@@ -20,7 +20,7 @@
 
 .img-overlay {
     position: absolute;
-    left: 38px;
+    left: 0;
     top: 0;
     width: 255px;
     height: 255px;
@@ -29,12 +29,12 @@
     border-radius: 50%;
     margin: 0px auto;
     visibility: hidden;
-    transition: .5s;
+    transition: all .5s ease-in-out;
 }
 
 .speaker-div:hover .speaker-title {
     color: #ff007a;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .speaker-div:hover .img-overlay {
@@ -42,5 +42,23 @@
 }
 
 .speaker-div:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .speaker-img {
+        width: 220px !important;
+        height: 220px !important;
+    }
+
+    .speaker-img img {
+        width: 220px !important;
+        height: 220px !important;
+    }
+
+    .img-overlay {
+        width: 220px;
+        height: 220px;
+
+    }
 }

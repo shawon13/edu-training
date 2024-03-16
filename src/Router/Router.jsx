@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/purchase',
-                element: <PrivetRoute><Purchase></Purchase></PrivetRoute>
+                element: <Purchase></Purchase>
             },
             {
                 path: '/login',
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <Contact></Contact>
+                element: <PrivetRoute><Contact></Contact></PrivetRoute>
             },
         ]
     }

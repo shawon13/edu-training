@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import './Register.css'
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 // import { ToastContainer, toast } from 'react-toastify';
@@ -61,7 +62,7 @@ const Register = () => {
 
 
     return (
-        <div className='mx-auto card bg-info-subtle my-5 px-5 py-4' style={{ width: '35%' }}>
+        <div className='mx-auto card bg-info-subtle my-5 px-5 py-4 register-width' style={{ width: '35%' }}>
             <h2 className='text-center mb-4'>Create an account</h2>
             <Form onSubmit={handleRegister}>
                 <ToastContainer />

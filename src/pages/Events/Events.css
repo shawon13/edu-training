@@ -1,0 +1,11 @@
+@media screen and (max-width:767px) {
+    .event-title {
+        font-size: 50px !important;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .event-title {
+        font-size: 42px !important;
+    }
+}

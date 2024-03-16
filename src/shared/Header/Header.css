@@ -71,3 +71,23 @@
 .sub-menu-link {
     cursor: pointer;
 }
+
+@media screen and (max-width:991px) {
+    .logo-pic {
+        width: 80px !important;
+    }
+
+    .logo-title {
+        font-size: 24px !important;
+    }
+
+    .logo-des {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+}
